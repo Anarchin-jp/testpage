@@ -1,0 +1,598 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja"><head><script src="/ShigakuApp/static/111213/js/perf/stub.js" type="text/javascript"></script><script src="/ShigakuApp/faces/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript?rel=1765559470000" type="text/javascript"></script><script src="/ShigakuApp/jslibrary/1752551382258/ui-sfdc-javascript-impl/SfdcCore.js" type="text/javascript"></script><script src="/ShigakuApp/jslibrary/1746634855258/sfdc/IframeThirdPartyContextLogging.js" type="text/javascript"></script><script src="/ShigakuApp/static/111213/js/picklist4.js" type="text/javascript"></script><script src="/ShigakuApp/jslibrary/1686615502258/sfdc/VFState.js" type="text/javascript"></script><script src="/ShigakuApp/jslibrary/1647410351258/sfdc/NetworkTracking.js" type="text/javascript"></script><script>try{ NetworkTracking.init('/ShigakuApp/_ui/networks/tracking/NetworkTrackingServlet', 'network', '0665i00000BGpkG'); }catch(x){}</script><script>(function(UITheme) {
+    UITheme.getUITheme = function() { 
+        return UserContext.uiTheme;
+    };
+}(window.UITheme = window.UITheme || {}));</script></head><body> 
+    <head>
+<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+
+        <title>&#26481;&#20140;&#37117;&#31169;&#23398;&#36001;&#22243;</title>
+        <meta charset="utf-8" />
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <meta Content="ja" http-equiv="Content-Language" />
+        <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+        <meta name="description" />
+        <meta name="author" />
+        
+        <style>
+            html,
+            body,
+            textarea {
+                font-family: "Droid Sans",  "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Roboto, Verdana, sans-serif;
+                color: #333333;
+                font-size: 100%;
+                line-height: 160%;
+            }
+            
+            /*ヘッダー*/
+            .logo{
+                position: relative;
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+            
+            #logoutButton {
+                position: absolute;
+                top: 2rem;
+                right: 1rem;
+            }
+            
+            /*ボディ*/
+                
+            .bodyStyle{
+                padding: 0rem 1rem;
+            }
+            .smallInfo{
+                font-size: 1rem;
+            }
+            
+            .smallInfoleft{
+                font-size: 1rem;
+                width: 16rem;
+            }
+            
+            .smallInforight{
+                width: 33rem;
+                font-size: 1rem;
+            }
+            
+            .smallInfoBlack{
+                font-size: 1rem;
+            }
+            
+            /*連絡先変更*/
+            .changeMailBlock{
+                display: flex;
+                align-items: center;
+            }
+            
+            #changeMailButton{
+                width: 12rem;
+                height: 35px;
+                max-width: 120px;
+            }
+            
+            #changeMailText{
+                text-align: left;
+                font-size: 1rem;
+                padding: 0rem 0rem 0rem 1rem;
+            }
+
+            .blockTitle{
+                font-size: 1.2rem;
+                width: 80%;
+                align-items: baseline;
+            }
+            
+            /*生徒名*/
+            .studentList{
+                width : 67%;
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+
+            #addStudentButton1{
+                margin: 1rem 1rem;
+            }   
+            
+            #addStudentButton2{
+                margin: 1rem 1rem;
+            } 
+            
+            .variInfo{
+                width: 90%;
+                margin: auto;
+                font-size: 1rem;
+            }
+            
+            /*変更・追加ボタン*/
+            #flawButton{
+                margin: 0rem 0rem 0rem 1rem;
+            }
+                       
+            
+            #thinButton1{
+                padding: 0.3rem 0.3rem;
+                font-size: 0.8rem;
+            }
+            
+            #thinButton2{
+                padding: 0.3rem 0.3rem;
+                font-size: 0.8rem;
+            }
+            
+            [id^="outsideSheet"] {
+                border-width: 1px;
+                border-style: solid;
+                border-color: #009040;
+                padding: 1rem 0rem;
+            }
+            
+            .centerButton{
+                text-align: center;
+            }
+                        
+            .underline {
+                font-size: 1.5rem;
+                color: #009040;
+                padding: 0rem 0rem 0.4rem 0rem;
+                border-bottom: 2px solid #009040; 
+                width: 90%;
+                text-align: left;
+                margin: auto;
+            }
+            
+            select {
+                /* デザインリセット */
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                /* デザイン */
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                border: 1px solid #ccc;
+                background: transparent;
+                border-radius: 0.3rem;
+                
+                /*background-image: url("./images/select_arrow.svg");*/
+                background-repeat: no-repeat;
+                background-size: 0.9rem 0.9rem;
+                background-position: right 0.6rem center;
+                width: auto;
+                display: inline;
+            }
+            
+            .applyInfoSheet1 table{
+                margin-right:auto;
+                margin-left:0px;
+                table-layout: fixed;
+                border-collapse: collapse;
+                overflow-wrap: break-word;
+                word-break: break-word;
+            }
+            
+            .applyInfoSheet1 td{
+                border: 0px;
+                text-align: left;
+            }
+            
+            .applyInfoSheet1 th{
+                vertical-align: top;
+                border: 0px;
+                text-align: left;
+                font-weight: normal;
+                padding: 0.3rem 0rem;
+            }
+            .applyInfoFlex{
+                display: flex;
+                justify-content: space-between;
+            }
+            .applyInfoSheet table{
+                margin: 0 auto;
+                border: 2px #009040 solid;
+                border-collapse: collapse;
+            }
+            
+            .applyInfoSheet td{
+                border: 1px #009040 solid;
+                padding: 0.5rem;
+            }
+            
+            .applyInfoSheet th{
+                border: 1px #009040 solid;
+                background-color: #E9F3ED;
+                padding: 0.5rem;
+            }
+            
+            div.submitButton button,
+            div.submitButton input[type="button"],
+            div.submitButton input[type="submit"] {
+                -webkit-appearance: none;
+                border-radius: 0.3rem;
+                font-size: 1rem;
+                padding: 0.3rem 0.7rem;
+                margin: 1rem 0.2rem 0;
+                max-width: 400px;
+                display: inline;
+            }
+            
+            div.submitButton .Btn3 {
+                width: 25%;
+                transform: translateY(-2px);
+            }
+            div.leftButton_class .Btn3{
+                transform: translate(15px,0px);
+            }
+            
+            /* ボタン全体の設定 */
+            button,
+            input[type="button"],
+            input[type="submit"] {
+                padding: 0.3rem 0.7rem;
+                background-color: #009040;
+                border: 0;
+                border-bottom: solid 3px #aaa;
+                border-radius: 0.3rem;
+                color: #fff;
+                font-size: 1rem;
+            }
+            
+            button:hover,
+            input[type="button"],
+            input[type="submit"]:hover {
+                opacity: 0.9;
+            }
+            
+            button:active,
+            input[type="button"],
+            input[type="submit"]:active {
+                transform: translateY(-1px);
+                background-color: #1690B0;
+                opacity: 1;
+            }
+            
+            .width1{
+                width: 13.5%;
+            }
+            
+            .width2{
+                width: 20%;
+            }
+            
+            .width3{
+                width: 6.5%;
+            }
+            
+            .width4{
+                width: 7.5%;
+            }
+            
+            .width5{
+                /* width: 10%; */
+                min-width: 80px;
+            }
+            
+            .width6{
+                width: 75%
+            }
+            
+            .longtext{
+                overflow-wrap: break-word;
+                word-break: break-word;
+                display: flex;
+            }
+            
+            .footer {
+                position: absolute;
+                right: 0;
+                left: 0;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .a1{
+                min-width: fit-content;
+                cursor: grab;
+                text-align: right;
+                text-decoration: underline rgb(0,112, 192);
+                color: rgb(0,112, 192);
+            }
+            .leftButton_class{
+                text-align: left;
+            }
+            .studentBlock_class{
+                display: flex;
+                align-items: center;
+            }
+            .titleInfo_class{
+                margin-top: 1rem;
+            }
+            .studentOptions{
+                max-width: 300px;
+            }
+            .schoolName_class{
+                margin-top: 5px;
+            }
+            
+            @media screen and (min-width: 768px){
+                .schoolName_class{
+                    text-align:left;
+                }
+            }
+        </style>
+
+    </head>
+<form id="Page:form" name="Page:form" method="post" action="/ShigakuApp/AppMyPage_p" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="Page:form" value="Page:form" />
+
+        <div id="headerBlock"><img src="logo.svg" height="50" class="logo" />
+             <button class="Btn3" id="logoutButton" onclick="location.href='https://shigaku-tokyo-k.my.site.com/ShigakuApp/secur/logout.jsp'" type="button">
+                 &#12525;&#12464;&#12450;&#12454;&#12488;
+             </button>
+        </div>
+        
+        <div class="bodyStyle" id="body">
+            <br />
+            
+            <span style="border-width: 1px; border-style: solid; padding: 2px 6px; font-weight: bold; ">
+                &#12510;&#12452;&#12506;&#12540;&#12472;
+            </span>
+            
+            <div class="applyInfoSheet1">                       
+                <table>
+                    <tr>
+                        <th class="width5">&#12518;&#12540;&#12470;ID:</th>
+                        <th class="width6">anarchin.moon@gmail.com</th>
+                    </tr>
+
+                    <tr>
+                        <td style="vertical-align: top;">&#20445;&#35703;&#32773;&#21517;:</td>
+                        <td style="width:100%;display:inline; margin-right: 10px">&#26611; &#25935;&#21746;&#12288;&#27096;</td> 
+                        <td style="position: relative;display:inline">
+                            <a class="a1" id="changeMailButton" onclick="goToContactChangePageFn();">
+                                &#36899;&#32097;&#20808;&#22793;&#26356;
+                            </a>
+<script type="text/javascript" language="Javascript">function dpf(f) {var adp = f.adp;if (adp != null) {for (var i = 0;i < adp.length;i++) {adp[i].parentNode.removeChild(adp[i]);}}};function apf(f, pvp) {var adp = new Array();f.adp = adp;var ps = pvp.split(',');for (var i = 0,ii = 0;i < ps.length;i++,ii++) {var p = document.createElement("input");p.type = "hidden";p.name = ps[i];p.value = ps[i + 1];f.appendChild(p);adp[ii] = p;i += 1;}};function jsfcljs(f, pvp, t) {apf(f, pvp);var ft = f.target;if (t) {f.target = t;}f.submit();f.target = ft;dpf(f);};</script>
+<script>function goToContactChangePageFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id4,Page:form:j_id4','');}return false }</script>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <div style="padding: 1rem 0rem;">
+                    &#25480;&#26989;&#26009;&#36605;&#28187;&#21161;&#25104;&#37329;&#12539;&#22888;&#23398;&#32102;&#20184;&#37329;&#30003;&#35531;&#12399;&#12289;&#20197;&#19979;&#12304;&#21508;&#31278;&#30003;&#35531;&#12305;&#12424;&#12426;&#12362;&#30003;&#36796;&#12415;&#12367;&#12384;&#12373;&#12356;&#12290;<span class="font-weight: bold;"></span>
+            </div>
+            <br />
+            
+            <div id="outsideSheet1">
+                <div class="underline">&#21508;&#31278;&#30003;&#35531;</div>
+                <div class="variInfo">
+                    
+                    <div class="titleInfo_class">
+                            &#29983;&#24466;&#21517;&#27396;&#12434;&#25276;&#12375;&#12390;&#12289;&#30003;&#35531;&#12377;&#12427;&#29983;&#24466;&#12434;&#36984;&#25246;&#12375;&#12390;&#12367;&#12384;&#12373;&#12356;&#12290;&#34920;&#31034;&#12373;&#12428;&#12394;&#12356;&#29983;&#24466;&#12395;&#12388;&#12356;&#12390;&#12399;&#12289;&#12300;&#26032;&#35215;&#30003;&#35531;&#12301;&#12363;&#12425;&#30003;&#35531;&#12434;&#34892;&#12387;&#12390;&#12367;&#12384;&#12373;&#12356;&#12290;
+                    </div>
+                    <br />    
+                    
+                    <div class="studentBlock_class">
+                    <div class="blockTitle">
+                        <span style="min-width: fit-content">&#29983;&#24466;&#21517;</span>
+                        <span style="margin-left: 0.5rem"><select name="Page:form:j_id14" class="studentList" size="1" onchange="A4J.AJAX.Submit('Page:form',event,{'similarityGroupingId':'Page:form:j_id16','parameters':{'Page:form:j_id16':'Page:form:j_id16'} } )">	<option value="柳 祉豪" selected="selected">&#26611; &#31049;&#35946;</option>
+</select>
+                        </span>
+                        </div>
+                        <a class="a1" id="appStatus" onclick="appStatusFun()">&#30003;&#35531;&#29366;&#27841;</a>
+                    </div>
+                    
+                    <div>
+                        <div class="schoolName_class">
+                            <span class="smallInfo">&#23398;&#26657;&#21517;&#65306;&#38306;&#26481;&#22269;&#38555;&#39640;&#31561;&#23398;&#26657;</span><br />
+                            <span class="smallInfo">&#23398;&#26657;&#31278;&#21029;&#65306;&#31169;&#31435;&#39640;&#31561;&#23398;&#26657;</span><br />
+                            <span class="smallInfo" style="display:contents"> &#35506;&#31243;&#65306;&#20840;&#26085;&#21046;&#35506;&#31243;</span>
+                        </div>
+                        <br />
+                        <div style="display:block">
+                            <outputText>&#9679;&#29983;&#24466;&#21517;&#27396;&#12395;&#34920;&#31034;&#12373;&#12428;&#12390;&#12356;&#12427;&#29983;&#24466;&#12398;&#20170;&#24180;&#24230;&#12398;&#30003;&#35531;&#12434;&#34892;&#12356;&#12414;&#12377;&#12290;</outputText>
+                            <div class="leftButton_class">
+                               <button class="Btn3" onclick="addApplicationFn();" style="display:none" type="button">
+                                   &#30003;&#35531;&#21463;&#20184;
+                               </button> 
+                               <button class="Btn3" disabled="true" onclick="addApplicationFn();" style="display:block;background: #ccc" type="button">
+                                   &#30003;&#35531;&#21463;&#20184;
+                               </button><script>function addApplicationFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id18,Page:form:j_id18','');}return false }</script>
+                            </div>
+                        </div>
+                        <div style="display:none">
+                            <outputText>&#9679;&#29983;&#24466;&#21517;&#27396;&#12395;&#34920;&#31034;&#12373;&#12428;&#12390;&#12356;&#12427;&#29983;&#24466;&#12398;&#19968;&#26178;&#20445;&#23384;&#12487;&#12540;&#12479;&#12364;&#23384;&#22312;&#12375;&#12414;&#12377;&#12290;&#19968;&#26178;&#20445;&#23384;&#12487;&#12540;&#12479;&#12363;&#12425;&#20877;&#38283;&#12375;&#12414;&#12377;&#12290;</outputText>
+                            <div class="leftButton_class">
+                                <button class="Btn3" onclick="tempApplicationFn();" type="button">
+                                    &#30003;&#35531;&#20877;&#38283;
+                                </button><script>function tempApplicationFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id20,Page:form:j_id20','');}return false }</script>
+                            </div>    
+                        </div>
+                        <div style="margin:1rem 0">&#9679;&#29983;&#24466;&#21517;&#27396;&#12395;&#34920;&#31034;&#12373;&#12428;&#12390;&#12356;&#12427;&#29983;&#24466;&#12398;&#30003;&#35531;&#20869;&#23481;&#12398;&#22793;&#26356;&#12539;&#36861;&#21152;&#12434;&#34892;&#12356;&#12414;&#12377;&#12290;
+                            <div class="leftButton_class"> 
+                                <button class="Btn3" onclick="goToFlawsCorrectionPageFn();" style="display:none" type="button">
+                                    &#22793;&#26356;&#12539;&#36861;&#21152;
+                                </button>
+                                <button class="Btn3" disabled="true" onclick="goToFlawsCorrectionPageFn();" style="display:inline-block;                                             background: #ccc" type="button">
+                                    &#22793;&#26356;&#12539;&#36861;&#21152;
+                                </button><script>function goToFlawsCorrectionPageFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id25,Page:form:j_id25','');}return false }</script>
+                            </div>
+                            
+                            <div class="leftButton_class" style="display:none;">                                     
+                                <button class="Btn3" onclick="goToBenefitFlawsCorrectionPageFn();" style="display:none" type="button">
+                                    &#22888;&#23398;&#32102;&#20184;&#37329;<br />&#22793;&#26356;&#12539;&#36861;&#21152;
+                                </button>
+                                
+                                <button class="Btn3" disabled="true" onclick="goToBenefitFlawsCorrectionPageFn();" style="display:none;                                             background: #ccc" type="button">
+                                    &#22888;&#23398;&#32102;&#20184;&#37329;<br />&#22793;&#26356;&#12539;&#36861;&#21152;
+                                </button><script>function goToBenefitFlawsCorrectionPageFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id27,Page:form:j_id27','');}return false }</script>
+                            
+                                <button class="Btn3" id="flawButton" onclick="goToSubsidyFlawsCorrectionPageFn();" style="display:none" type="button">
+                                    &#25480;&#26989;&#26009;&#36605;&#28187;&#21161;&#25104;&#37329;<br />&#22793;&#26356;&#12539;&#36861;&#21152;
+                                </button>
+                                
+                                <button class="Btn3" disabled="true" id="flawButton" onclick="goToSubsidyFlawsCorrectionPageFn();" style="display:none;                                             background: #ccc" type="button">
+                                    &#25480;&#26989;&#26009;&#36605;&#28187;&#21161;&#25104;&#37329;<br />&#22793;&#26356;&#12539;&#36861;&#21152;
+                                </button><script>function goToSubsidyFlawsCorrectionPageFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id29,Page:form:j_id29','');}return false }</script>
+                            </div>
+                        </div>
+                        <div>
+                            <outputText>&#9679;&#29983;&#24466;&#21517;&#27396;&#12395;&#34920;&#31034;&#12373;&#12428;&#12394;&#12356;&#29983;&#24466;&#12398;&#30003;&#35531;&#12434;&#34892;&#12356;&#12414;&#12377;&#12290;</outputText>
+                            <div class="leftButton_class">
+                                <div style="display:none">
+                                    <button class="Btn3" onclick="addStudentFn();" type="button">
+                                            &#26032;&#35215;&#30003;&#35531;
+                                    </button> 
+                                </div>
+                                <div style="display:inline-block">
+                                    <button class="Btn3" disabled="true" style="background: #ccc" type="button">
+                                            &#26032;&#35215;&#30003;&#35531;
+                                    </button>  
+                                </div><script>function addStudentFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id31,Page:form:j_id31','');}return false }</script>
+                                
+                                <div style="display:none">
+                                    <button class="Btn3" onclick="newApplicationFn();" type="button">
+                                            &#26032;&#35215;&#30003;&#35531;
+                                    </button> 
+                                </div><script>function newApplicationFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id33,Page:form:j_id33','');}return false }</script>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+            <div id="outsideSheet2" style="margin-top: 1rem;">
+                <div class="underline">&#30003;&#35531;&#29366;&#27841;</div>
+                <br /><span id="Page:form:j_id35" style="display:none" class="variInfo">
+                        
+                        </span>
+                
+                <div class="variInfo" style="display:block">
+                       &#20170;&#24180;&#24230;&#12398;&#30003;&#35531;&#20869;&#23481;&#12398;&#35443;&#32048;&#12434;&#12372;&#30906;&#35469;&#12356;&#12383;&#12384;&#12369;&#12414;&#12377;&#12290; 
+                    <br /><br />
+
+                    <div class="applyInfoSheet">                       
+                        <table>
+                            <tr>
+                                <th class="width1">&#30003;&#35531;&#26085;</th>
+                                <th class="width2">&#21161;&#25104;&#37329;&#21517;</th>
+                                <th class="width3" style="padding: 0.6rem;">&#23529;&#26619;&#29366;&#27841;</th>
+                                <th class="width4">&#35443;&#32048;</th>
+                            </tr>
+                            
+                            <tr style="display:table-row">
+                                
+                                
+                                <td style="padding-left: 1px;padding-right: 1px;text-align:center;word-break: auto-phrase;"> 2025&#24180;07&#26376;10&#26085;
+                                </td>
+                                
+                                
+                                
+                                <td style="padding-left: 5px;padding-right: 1px;text-align:left;">
+                                    &#25480;&#26989;&#26009;&#36605;&#28187;&#21161;&#25104;&#37329;
+                                </td>
+                                                                
+                                
+                                
+                                <td style="text-align:center;white-space: nowrap;padding: initial;">&#23529;&#26619;&#20013;
+                                </td>
+                                
+                                
+                                <td style="padding-left: 0.5px;padding-right: 0.5px;text-align:center;">
+                                    <button class="Btn3" id="thinButton1" onclick="goToSubsidyApplicationDetailPageFn()" type="button">
+                                    &#34920;&#31034;
+                                    </button><script>function goToSubsidyApplicationDetailPageFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id46,Page:form:j_id46','');}return false }</script>
+                                </td>
+                            </tr>
+                            
+                            <tr style="display:none">
+                                
+                                
+                                <td style="padding-left: 1px;padding-right: 1px;text-align:center;word-break: auto-phrase;">
+                                </td>
+                                
+                                
+                                <td style="padding-left: 5px;padding-right: 1px;text-align:left;">
+                                    &#22888;&#23398;&#32102;&#20184;&#37329;
+                                </td>
+                                
+                                
+                                
+                                <td style="text-align:center;white-space: nowrap;padding: initial;">&#23529;&#26619;&#20013;
+                                </td>
+                                
+                                
+                                <td style="padding-left: 0.5px;padding-right: 0.5px;text-align:center;">
+                                    <button class="Btn3" id="thinButton2" onclick="goToBenefitsApplicationDetailPageFn()" type="button">
+                                        &#34920;&#31034;
+                                    </button><script>function goToBenefitsApplicationDetailPageFn() { SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]); if(typeof jsfcljs == 'function'){jsfcljs(document.forms['Page:form'],'Page:form:j_id53,Page:form:j_id53','');}return false }</script>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><div id="Page:form:j_id59"></div>
+</form><span id="ajax-view-state-page-container" style="display: none"><span id="ajax-view-state" style="display: none"><input type="hidden"  id="com.salesforce.visualforce.ViewState" name="com.salesforce.visualforce.ViewState" value="i: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" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateVersion" name="com.salesforce.visualforce.ViewStateVersion" value="202512121711100000" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateMAC" name="com.salesforce.visualforce.ViewStateMAC" value="AGV5SnViMjVqWlNJNklqUTRWRWhaWldKQmJFcHVSbUpZWDNnelpVdzRSa0ptZEVSQ04yNTRTVTlPYlZWcVIxbGZObVoxVDFWY2RUQXdNMlFpTENKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUlzSW10cFpDSTZJbnRjSW5SY0lqcGNJakF3UkRWcE1EQXdNREE0UVd4b1Jsd2lMRndpZGx3aU9sd2lNREpITldrd01EQXdNREE1WkRobVhDSXNYQ0poWENJNlhDSjJabk5wWjI1cGJtZHJaWGxjSWl4Y0luVmNJanBjSWpBd05Vb3pNREF3TURBd2NqY3lNbHdpZlNJc0ltTnlhWFFpT2xzaWFXRjBJbDBzSW1saGRDSTZNVGMyTlRjM01UUTVPVFl3TUN3aVpYaHdJam93ZlE9PS4uMzB0RGFqalktSGlKRnlnSWUzRmEzcnpWOHU3ODlRNGlzZEIyUm9TeGtQTT0=" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateCSRF" name="com.salesforce.visualforce.ViewStateCSRF" value="VmpFPSxNakF5TlMweE1pMHhPRlF3TkRvd05EbzFPUzQyTURGYSx1ZDBHa1BSOU4wUlZTb0tEaFpTb2laRmk1dlRVeUlNcXJfLTg5ak1idzE4PSxPV0prTUROaA==" /></span></span>
+    
+    <div class="footer" id="footer"><span id="Page:AppFooter">
+    <head>
+<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+
+        <style>
+            
+        .firstLine {
+            font-size: 0.8rem;
+            color: #000000;
+            padding: 0rem 0rem 0.5rem 0rem;
+        }
+        
+        .secondLine {
+            color: #666666;
+            font-size: 0.6rem;
+        }
+        
+        .footerLink{
+            color: #000000 !important;
+            text-decoration: none !important;    
+        }
+        </style>
+    </head>
+    
+    <hr color="#ccc" size="3" />
+    
+    <div class="firstLine">
+        <a class="footerLink" href="AppPrivacy_p"><span>&#21033;&#29992;&#35215;&#32004;&#12539;&#12469;&#12452;&#12488;&#12509;&#12522;&#12471;&#12540;</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="footerLink" href="https://www.shigaku-tokyo.or.jp/index.html"><span>&#31169;&#23398;&#36001;&#22243;&#12507;&#12540;&#12512;&#12506;&#12540;&#12472;</span></a>
+    </div>
+    
+    
+    
+    <div class="secondLine">
+        <span>Copyright &copy; &#20844;&#30410;&#36001;&#22243;&#27861;&#20154; &#26481;&#20140;&#37117;&#31169;&#23398;&#36001;&#22243;. All Rights Reserved.</span>
+    </div></span>
+    </div>
+    <script>
+        /**
+         * @Description: 申請状況スクロール(appStatusFun)
+         * @Param なし
+         * @Return なし
+         * @Exception なし
+         **/
+        function appStatusFun(){
+            // 申請状況エレメント取得
+            let outsidesheet = document.getElementById('outsideSheet2');
+            // スクロールを追加
+            document.documentElement.scrollTop = outsidesheet.offsetTop;
+        }
+
+    </script><script type="text/javascript">Sfdc.onReady(function(){
+	SfdcApp && SfdcApp.Visualforce && SfdcApp.Visualforce.VSManager && SfdcApp.Visualforce.VSManager.vfPrepareForms(["Page:form"]);
+
+});</script></body></html>
